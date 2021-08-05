@@ -9,3 +9,6 @@ The project devided to 3 folders inside the src:
 * Components: include all component jsx files.
 * Services: include AJAX calls and error handlar function.
 * Styles: include CSS files. 
+
+NOTE! 
+The data flows between components by props chain.
