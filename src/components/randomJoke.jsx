@@ -55,6 +55,7 @@ const RandomJoke = () => {
     }
   };
 
+  if (!joke && isDataPassed === 1) return <div>loading...</div>;
   return (
     <React.Fragment>
       <div className="random-container">

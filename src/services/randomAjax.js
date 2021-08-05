@@ -22,9 +22,9 @@ import axios from "axios";
     }
   }
   
-const test = {
+const random = {
   getCategories,
   randomOptions,
 }
 
-export default test;
+export default random;
