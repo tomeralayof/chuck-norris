@@ -1,0 +1,50 @@
+.btn-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  background: none;
+  cursor: pointer;
+  border: 2px solid orange;
+  padding: 1rem;
+  color: orange;
+  font-weight: 400;
+  text-align: center;
+  width: 10rem;
+}
+
+.btn-disabled {
+  border: none;
+  background-color: #b3bec2;
+  opacity: 0.5;
+}
+
+.btn-unable {
+  background: #f15a24;
+  border: 2px solid #f15a24;
+  color: white;
+  cursor: pointer;
+}
+
+.active {
+  width: 10rem;
+  background: #f15a24;
+  cursor: pointer;
+  border: 2px solid #f15a24;
+  padding: 1rem;
+  color: #f15a24;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  width: 10rem;
+}
+@media (max-width: 1000px) {
+  .btn {
+    width: 15vw;
+  }
+  .active {
+    width: 15vw;
+  }
+}

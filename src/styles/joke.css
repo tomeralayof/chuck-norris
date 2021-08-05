@@ -1,0 +1,73 @@
+.joke-containe {
+  padding: 1%;
+  width: 50rem;
+  min-width: 50%;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.borde-text {
+  border-top: 2px dashed #29abe2;
+  border-right: 2px dashed #29abe2;
+  border-bottom: 2px solid #29abe2;
+  border-left: 2px solid #29abe2;
+  border-width: thick;
+  position: relative;
+  z-index: 0;
+}
+
+.joke {
+  color: #29abe2;
+  text-align: center;
+  padding: 2em;
+  font-size: 2rem;
+}
+
+.left-quote {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  margin-left: 1%;
+  background-color: white;
+  z-index: 1;
+}
+
+.fas.fa-quote-left {
+  color: #e1e2e3;
+  font-size: 5rem;
+}
+
+.right-quote {
+  position: absolute;
+  left: 90%;
+  top: 70%;
+  margin-left: 1%;
+  background-color: white;
+  z-index: 1;
+}
+
+.fas.fa-quote-right {
+  color: #e1e2e3;
+  font-size: 5rem;
+}
+
+@media (max-width: 950px) {
+  .joke-containe {
+    max-width: 70%;
+  }
+  .joke {
+    color: #29abe2;
+    text-align: center;
+    padding: 2em;
+    font-size: 1rem;
+  }
+  .fas.fa-quote-left {
+    color: #e1e2e3;
+    font-size: 3rem;
+  }
+  .fas.fa-quote-right {
+    color: #e1e2e3;
+    font-size: 3rem;
+  }
+}

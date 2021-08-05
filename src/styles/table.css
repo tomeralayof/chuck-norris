@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  max-width: 950px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ite {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.ite-active {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  background-color: #e2f4fc;
+}
+
+.ite-active.ite-5 {
+  grid-column: 1/4;
+  text-align: center;
+  /* height: 200px; */
+  background-color: #fbfcff;
+  padding: 2em;
+}
