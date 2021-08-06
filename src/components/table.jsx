@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import search from "../services/searchAjax";
 import Loading from "./loading";
 import TableRow from "./tableRow";
 
 const Table = ({ results }) => {
   const [joke, setJoke] = useState({});
+  const [arrived, setArrived] = useState(false);
+
+  useEffect(() => {
+    if (results.result.length) {
+      setArrived(true);
+    }
+  }, [results]);
+
   const toggleClick = (res) => {
     setJoke(res);
   };
 
+  if (!arrived) return <Loading />;
   return (
     <div className="container">
       <div className="ite ite-1">ID</div>

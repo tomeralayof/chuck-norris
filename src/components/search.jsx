@@ -3,7 +3,6 @@ import search from "../services/searchAjax";
 import Table from "./table";
 import errorHandler from "../services/errorHandler";
 import Error from "./error";
-import Loading from "./loading";
 
 const SearchJoke = () => {
   const [isSearchTyped, setSearchTyped] = useState(false);
