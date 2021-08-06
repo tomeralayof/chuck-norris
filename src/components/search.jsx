@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import search from "../services/searchAjax";
 import Table from "./table";
 import errorHandler from "../services/errorHandler";
 import Error from "./error";
+import Loading from "./loading";
 
 const SearchJoke = () => {
   const [isSearchTyped, setSearchTyped] = useState(false);
   const [text, setText] = useState([]);
   const [results, setResult] = useState([]);
-  const [isShowTable, setShowTable] = useState(false);
   const [err, setErr] = useState("");
   const [isDataPassed, setIsDataPasses] = useState(0);
 
@@ -24,16 +24,13 @@ const SearchJoke = () => {
       data.result.sort((a, b) => {
         return new Date(b.created_at - a.created_at);
       });
-      console.log(data);
       setResult(data);
-      setShowTable(true);
       setIsDataPasses(1);
     } catch (err) {
       errorHandler(err, setErr, setIsDataPasses);
     }
   };
 
-  if (!results && isDataPassed === 1) return <div>loading...</div>;
   return (
     <React.Fragment>
       <div className="random-container">
@@ -49,7 +46,7 @@ const SearchJoke = () => {
           </button>
         </div>
       </div>
-      {isShowTable ? <Table results={results} /> : null}
+      {isDataPassed === 1 ? <Table results={results} /> : null}
       {isDataPassed === -1 ? <Error err={err} /> : null}
     </React.Fragment>
   );

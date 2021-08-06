@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import search from "../services/searchAjax";
+import Loading from "./loading";
 import TableRow from "./tableRow";
 
 const Table = ({ results }) => {
   const [joke, setJoke] = useState({});
-
   const toggleClick = (res) => {
     setJoke(res);
   };
