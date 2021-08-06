@@ -26,7 +26,7 @@ const TableTow = ({ res, joke, toggleClick, dateToDisplay }) => {
 
       {res === joke ? (
         <div className="ite-active ite-5">
-          <Joke joke={joke} isTable={isTable} />
+          <Joke joke={joke} />
         </div>
       ) : null}
     </React.Fragment>
