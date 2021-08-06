@@ -24,6 +24,7 @@ const SearchJoke = () => {
       data.result.sort((a, b) => {
         return new Date(b.created_at - a.created_at);
       });
+      console.log(data);
       setResult(data);
       setShowTable(true);
       setIsDataPasses(1);
